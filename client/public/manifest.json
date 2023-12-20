@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "React Rails",
+  "description": "Connected a React extension to a Rails API",
+  "permissions": ["activeTab"],
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "React Rails",
+    "default_width": 400,
+    "default_height": 600
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["contentScript.css"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
